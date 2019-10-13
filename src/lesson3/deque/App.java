@@ -4,6 +4,12 @@ import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) {
+
+        DequeTest();
+        DequeAsQueueTest();
+    }
+
+    private static void DequeTest() {
         try {
             Deque d = new DequeImpl(10);
             d.insertLeft(3);
@@ -30,6 +36,9 @@ public class App {
             System.out.println(e.getMessage());
             System.out.println("Невозможная операция. Работа с деком прекращена");
         }
+    }
+
+    private static void DequeAsQueueTest() {
         try {
             System.out.println("Проверяем на примере из урока");
             Deque q = new DequeImpl(5);
@@ -52,7 +61,5 @@ public class App {
         } catch (DequeException e) {
             System.out.println(e.getMessage());
         }
-
-
     }
 }
